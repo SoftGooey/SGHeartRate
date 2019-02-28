@@ -10,3 +10,4 @@
 "Ok" = "Ok";
 "bleUnsupported" = "Bluetooth is not supported on this %@.";
 "scanning" = "Scanning for Bluetooth Heart Rate Device";
+"beatsPerMinute" = "Beats Per Minute";

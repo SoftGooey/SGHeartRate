@@ -7,17 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF96DBC8D2CB0F75B0E9C8D8 /* Pods_SGHeartRate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAB1343B27DCA919539FE6B4 /* Pods_SGHeartRate.framework */; };
 		E46725432226354D00981BAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46725422226354D00981BAE /* AppDelegate.swift */; };
 		E46725452226354D00981BAE /* SGHeartRateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46725442226354D00981BAE /* SGHeartRateViewController.swift */; };
 		E46725482226354D00981BAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E46725462226354D00981BAE /* Main.storyboard */; };
 		E467254A2226354E00981BAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E46725492226354E00981BAE /* Assets.xcassets */; };
 		E467254D2226354E00981BAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E467254B2226354E00981BAE /* LaunchScreen.storyboard */; };
 		E467256622273C6A00981BAE /* heartRate.png in Resources */ = {isa = PBXBuildFile; fileRef = E467256522273C6A00981BAE /* heartRate.png */; };
-		E46725682227571600981BAE /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46725672227571600981BAE /* GraphView.swift */; };
 		E467257122275BAE00981BAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E467256F22275BAE00981BAE /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4427783CD4FE386C6B41CB3B /* Pods-SGHeartRate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGHeartRate.release.xcconfig"; path = "Target Support Files/Pods-SGHeartRate/Pods-SGHeartRate.release.xcconfig"; sourceTree = "<group>"; };
+		686BD66A2C52CC806DD75FC6 /* Pods-SGHeartRate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SGHeartRate.debug.xcconfig"; path = "Target Support Files/Pods-SGHeartRate/Pods-SGHeartRate.debug.xcconfig"; sourceTree = "<group>"; };
+		BAB1343B27DCA919539FE6B4 /* Pods_SGHeartRate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SGHeartRate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E467253F2226354D00981BAE /* SGHeartRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGHeartRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E46725422226354D00981BAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E46725442226354D00981BAE /* SGHeartRateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SGHeartRateViewController.swift; sourceTree = "<group>"; };
@@ -26,7 +29,6 @@
 		E467254C2226354E00981BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E467254E2226354E00981BAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E467256522273C6A00981BAE /* heartRate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = heartRate.png; sourceTree = "<group>"; };
-		E46725672227571600981BAE /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
 		E467257022275BAE00981BAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -35,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF96DBC8D2CB0F75B0E9C8D8 /* Pods_SGHeartRate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A49D0E90D46CABBCA7E30F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				686BD66A2C52CC806DD75FC6 /* Pods-SGHeartRate.debug.xcconfig */,
+				4427783CD4FE386C6B41CB3B /* Pods-SGHeartRate.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E46725362226354D00981BAE = {
 			isa = PBXGroup;
 			children = (
 				E46725412226354D00981BAE /* SGHeartRate */,
 				E46725402226354D00981BAE /* Products */,
+				0A49D0E90D46CABBCA7E30F6 /* Pods */,
+				E7E35FC35D1CAF4D2C24C195 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,7 +76,6 @@
 			children = (
 				E46725422226354D00981BAE /* AppDelegate.swift */,
 				E46725492226354E00981BAE /* Assets.xcassets */,
-				E46725672227571600981BAE /* GraphView.swift */,
 				E467256522273C6A00981BAE /* heartRate.png */,
 				E467254E2226354E00981BAE /* Info.plist */,
 				E467254B2226354E00981BAE /* LaunchScreen.storyboard */,
@@ -73,6 +86,14 @@
 			path = SGHeartRate;
 			sourceTree = "<group>";
 		};
+		E7E35FC35D1CAF4D2C24C195 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAB1343B27DCA919539FE6B4 /* Pods_SGHeartRate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -80,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E46725512226354E00981BAE /* Build configuration list for PBXNativeTarget "SGHeartRate" */;
 			buildPhases = (
+				8B2D209992212DEAF6EC164C /* [CP] Check Pods Manifest.lock */,
 				E467253B2226354D00981BAE /* Sources */,
 				E467253C2226354D00981BAE /* Frameworks */,
 				E467253D2226354D00981BAE /* Resources */,
+				F21FBBCAEA227CCFC8DCD7FB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +164,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8B2D209992212DEAF6EC164C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SGHeartRate-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F21FBBCAEA227CCFC8DCD7FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SGHeartRate/Pods-SGHeartRate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SGHeartRate/Pods-SGHeartRate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E467253B2226354D00981BAE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -148,7 +218,6 @@
 			files = (
 				E46725452226354D00981BAE /* SGHeartRateViewController.swift in Sources */,
 				E46725432226354D00981BAE /* AppDelegate.swift in Sources */,
-				E46725682227571600981BAE /* GraphView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +371,7 @@
 		};
 		E46725522226354E00981BAE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686BD66A2C52CC806DD75FC6 /* Pods-SGHeartRate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -321,6 +391,7 @@
 		};
 		E46725532226354E00981BAE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4427783CD4FE386C6B41CB3B /* Pods-SGHeartRate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

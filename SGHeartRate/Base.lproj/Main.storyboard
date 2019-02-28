@@ -71,7 +71,7 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m33-fe-i2b" userLabel="Graph View" customClass="GraphView" customModule="SGHeartRate" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m33-fe-i2b" userLabel="Chart View" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="10" y="250" width="300" height="220"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.1333333333" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
@@ -112,8 +112,8 @@
                     <connections>
                         <outlet property="batteryLevelLabel" destination="Bn1-xg-MxH" id="99k-Xd-DtW"/>
                         <outlet property="deviceNameLabel" destination="ZPf-18-Eot" id="qNK-6u-SlH"/>
-                        <outlet property="graphView" destination="m33-fe-i2b" id="ubp-5G-g6v"/>
                         <outlet property="latestHeartRateLabel" destination="ixb-ls-ttZ" id="OZZ-fg-vvM"/>
+                        <outlet property="lineChartView" destination="m33-fe-i2b" id="O9y-ug-Uwh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SGHeartRateViewController.swift
 //  SGHeartRate
 //
 //  Created by Sophie Prince on 2019-02-26.
@@ -12,6 +12,7 @@
 
 import UIKit
 import CoreBluetooth
+import Charts
 
 let deviceInfoServiceCBUUID = CBUUID(string: "0x180A")
 let deviceManufacturerNameCBUUID = CBUUID(string: "0x2A29")
@@ -30,21 +31,33 @@ class SGHeartRateViewController: UIViewController {
     @IBOutlet weak var deviceNameLabel: UILabel!
     @IBOutlet weak var batteryLevelLabel: UILabel!
     @IBOutlet weak var latestHeartRateLabel: UILabel!
-    @IBOutlet weak var graphView: GraphView!
+    @IBOutlet weak var lineChartView: LineChartView!
     
     var centralManager: CBCentralManager!
     var heartRatePeripheral: CBPeripheral!
+    var lineChartDataSet = LineChartDataSet()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         centralManager = CBCentralManager(delegate: self, queue: nil)
+        
+        lineChartView.xAxis.drawLabelsEnabled = false
+        lineChartDataSet.lineWidth = 2
+        lineChartDataSet.circleRadius = 3
+        lineChartDataSet.label = NSLocalizedString("beatsPerMinute", comment: "")
+        lineChartDataSet.setCircleColor(UIColor.red)
+        lineChartDataSet.colors = [UIColor.red]
+        lineChartDataSet.drawValuesEnabled = false
     }
     
     func onHeartRateReceived(_ heartRate: Int) {
         latestHeartRateLabel.text = String(heartRate)
         if heartRate > 0 {
-            graphView.addPoint(aPoint: heartRate)
+            let entry = ChartDataEntry(x: Double(lineChartDataSet.count), y: Double(heartRate))
+            lineChartDataSet.append(entry)
+            let lineChartData = LineChartData(dataSet: lineChartDataSet)
+            lineChartView.data = lineChartData
         }
         print("BPM: \(heartRate)")
     }
@@ -126,7 +139,6 @@ extension SGHeartRateViewController: CBPeripheralDelegate {
                 print("\(characteristic.uuid): properties contains .notify")
                 peripheral.setNotifyValue(true, for: characteristic)
             }
-            
         }
     }
     
@@ -198,6 +210,8 @@ extension SGHeartRateViewController: CBPeripheralDelegate {
     
     private func deviceName(from characteristic: CBCharacteristic) -> String {
         guard let characteristicData = characteristic.value else { return "" }
+        
+        // Ascii?  Should it be UTF8 ?
         guard let name = String(data: characteristicData, encoding: String.Encoding.ascii) else { return "" }
         return name
     }
