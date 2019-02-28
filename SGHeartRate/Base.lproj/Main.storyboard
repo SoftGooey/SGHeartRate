@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Heart Rate View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SGHeartRateViewController" customModule="SGHeartRate" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbc-9f-eBq">
+                                <rect key="frame" x="10" y="40" width="300" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Device Name">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="17" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZPf-18-Eot">
+                                <rect key="frame" x="10" y="66" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wii-ld-p5e">
+                                <rect key="frame" x="10" y="112" width="300" height="20"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Battery Level">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="17" name=".SFNSText"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bn1-xg-MxH">
+                                <rect key="frame" x="10" y="138" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uY5-Ax-xdN">
+                                <rect key="frame" x="10" y="184" width="300" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Current Heart Rate">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            <integer key="NSUnderline" value="1"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m33-fe-i2b" userLabel="Graph View" customClass="GraphView" customModule="SGHeartRate" customModuleProvider="target">
+                                <rect key="frame" x="10" y="250" width="300" height="220"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.1333333333" blue="0.090196078430000007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="--" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixb-ls-ttZ">
+                                <rect key="frame" x="10" y="211" width="300" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bn1-xg-MxH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="85Q-lg-aOi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Bn1-xg-MxH" secondAttribute="trailing" constant="10" id="9ZI-Dy-XMB"/>
+                            <constraint firstItem="Wii-ld-p5e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="C1l-8X-6yw"/>
+                            <constraint firstItem="qbc-9f-eBq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Lrz-90-o2F"/>
+                            <constraint firstItem="ZPf-18-Eot" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="O1W-eG-iRZ"/>
+                            <constraint firstItem="m33-fe-i2b" firstAttribute="top" secondItem="ixb-ls-ttZ" secondAttribute="bottom" constant="18" id="OhK-E1-w3p"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qbc-9f-eBq" secondAttribute="trailing" constant="10" id="PaD-xj-bxl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ixb-ls-ttZ" secondAttribute="trailing" constant="10" id="QhF-vd-pjl"/>
+                            <constraint firstItem="ixb-ls-ttZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="Rba-h5-OPH"/>
+                            <constraint firstItem="m33-fe-i2b" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="U3Y-Z9-5mk"/>
+                            <constraint firstItem="uY5-Ax-xdN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="VPK-Hm-8Vq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZPf-18-Eot" secondAttribute="trailing" constant="10" id="ZZY-7n-9zF"/>
+                            <constraint firstItem="uY5-Ax-xdN" firstAttribute="top" secondItem="Bn1-xg-MxH" secondAttribute="bottom" constant="25" id="b0X-Ov-LHS"/>
+                            <constraint firstItem="Bn1-xg-MxH" firstAttribute="top" secondItem="Wii-ld-p5e" secondAttribute="bottom" constant="6" id="c2b-nl-3GJ"/>
+                            <constraint firstItem="ixb-ls-ttZ" firstAttribute="top" secondItem="uY5-Ax-xdN" secondAttribute="bottom" constant="6" id="iaK-Cp-0aa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="m33-fe-i2b" secondAttribute="trailing" constant="10" id="nFQ-jI-eJK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wii-ld-p5e" secondAttribute="trailing" constant="10" id="o3G-n4-isU"/>
+                            <constraint firstItem="Wii-ld-p5e" firstAttribute="top" secondItem="ZPf-18-Eot" secondAttribute="bottom" constant="25" id="re4-9E-yjb"/>
+                            <constraint firstItem="ZPf-18-Eot" firstAttribute="top" secondItem="qbc-9f-eBq" secondAttribute="bottom" constant="6" id="rpv-58-qmw"/>
+                            <constraint firstItem="qbc-9f-eBq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="s3p-8T-OJo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="m33-fe-i2b" secondAttribute="bottom" constant="10" id="tSQ-Kv-ghz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uY5-Ax-xdN" secondAttribute="trailing" constant="10" id="yGi-5H-szp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="batteryLevelLabel" destination="Bn1-xg-MxH" id="99k-Xd-DtW"/>
+                        <outlet property="deviceNameLabel" destination="ZPf-18-Eot" id="qNK-6u-SlH"/>
+                        <outlet property="graphView" destination="m33-fe-i2b" id="ubp-5G-g6v"/>
+                        <outlet property="latestHeartRateLabel" destination="ixb-ls-ttZ" id="OZZ-fg-vvM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52" y="26.53673163418291"/>
+        </scene>
+    </scenes>
+</document>

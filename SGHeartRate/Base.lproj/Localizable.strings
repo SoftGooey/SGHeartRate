@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  SGHeartRate
+
+  Created by Sophie Prince on 2019-02-27.
+  Copyright © 2019 SoftGooey. All rights reserved.
+*/
+"Warning" = "Warning!";
+"bleTurnedOff" = "Bluetooth has been turned off on your %@.  To use this app, turn on Bluetooth from your Settings.";
+"Ok" = "Ok";
+"bleUnsupported" = "Bluetooth is not supported on this %@.";
+"scanning" = "Scanning for Bluetooth Heart Rate Device";

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  SGHeartRate
+
+  Created by Sophie Prince on 2019-02-27.
+  Copyright © 2019 SoftGooey. All rights reserved.
+*/
+
+"Warning" = "Avertissement!";
+"bleTurnedOff" = "Bluetooth est désactivé.  Vous devez l'activer dans les Réglages pour utiliser cette application.";
+"bleUnsupported" = "Bluetooth n'est pas supporté sur ce %@.";
